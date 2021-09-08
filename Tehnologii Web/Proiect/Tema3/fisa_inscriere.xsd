@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified">
+    <xs:element name="FISA-INSCRIERE">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element ref="STUDENT" />
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+    <xs:element name="STUDENT">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element ref="CNP" />
+                <xs:element ref="NUME" />
+                <xs:element ref="INITIALA-TATA" />
+                <xs:element ref="DATE-CONTACT" />
+                <xs:element ref="DOMICILIU" />
+                <xs:element ref="OPTIUNI-ADMITERE" />
+                <xs:element ref="DATA-COMPLETARII" />
+                <xs:element ref="MEDIA-BAC" />
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+    <xs:element name="CNP" type="cnpType" />
+    <xs:element name="NUME" type="xs:string" />
+    <xs:element name="INITIALA-TATA" type="xs:string" />
+    <xs:element name="DATE-CONTACT">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element ref="NUMAR-TELEFON" />
+                <xs:element ref="ADRESA-EMAIL" />
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+    <xs:element name="NUMAR-TELEFON" type="xs:integer" />
+    <xs:element name="ADRESA-EMAIL" type="xs:string" />
+    <xs:element name="DOMICILIU">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element ref="TARA" />
+                <xs:element ref="JUDET" />
+                <xs:element ref="ORAS" />
+                <xs:element ref="ADRESA" />
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+    <xs:element name="TARA" type="xs:string" />
+    <xs:element name="JUDET" type="xs:string" />
+    <xs:element name="ORAS" type="xs:string" />
+    <xs:element name="ADRESA" type="xs:string" />
+    <xs:element name="OPTIUNI-ADMITERE">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element minOccurs="1" maxOccurs="5" ref="OPTIUNE" />
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+    <xs:element name="OPTIUNE" type="xs:string" />
+    <xs:element name="DATA-COMPLETARII" type="xs:date" />
+    <xs:element name="MEDIA-BAC" type="notaType" />
+
+
+    <xs:simpleType name="cnpType">
+        <xs:restriction base="xs:string">
+            <xs:length value="13" />
+            <xs:pattern value="[0-9]{13}" />
+        </xs:restriction>
+    </xs:simpleType>
+
+    <xs:simpleType name="notaType">
+        <xs:restriction base="xs:decimal">
+            <xs:minInclusive value="0" />
+            <xs:maxInclusive value="10" />
+        </xs:restriction>
+    </xs:simpleType>
+
+</xs:schema>

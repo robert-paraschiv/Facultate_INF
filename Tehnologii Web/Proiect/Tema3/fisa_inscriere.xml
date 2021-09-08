@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- <!DOCTYPE FISA-INSCRIERE SYSTEM "fisa_inscriere.dtd"> -->
+<FISA-INSCRIERE xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="fisa_inscriere.xsd">
+    <STUDENT>
+        <CNP>1234567890123</CNP>
+        <NUME>Robert Paraschiv</NUME>
+        <INITIALA-TATA>M</INITIALA-TATA>
+
+        <DATE-CONTACT>
+            <NUMAR-TELEFON>0756894556</NUMAR-TELEFON>
+            <ADRESA-EMAIL>robertparaschiv@mail.com</ADRESA-EMAIL>
+        </DATE-CONTACT>
+
+        <DOMICILIU>
+            <TARA>Romania</TARA>
+            <JUDET>DOLJ</JUDET>
+            <ORAS>Craiova</ORAS>
+            <ADRESA>Calea Bucuresti, Nr 23</ADRESA>
+        </DOMICILIU>
+
+        <OPTIUNI-ADMITERE>
+            <OPTIUNE>Informatica</OPTIUNE>
+            <OPTIUNE>Matematica-Informatica</OPTIUNE>
+        </OPTIUNI-ADMITERE>
+
+        <DATA-COMPLETARII>2021-03-21</DATA-COMPLETARII>
+
+        <MEDIA-BAC>8.25</MEDIA-BAC>
+    </STUDENT>
+</FISA-INSCRIERE>
